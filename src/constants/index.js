@@ -248,9 +248,9 @@ export const navLinks = [
   
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-      deskScale: isSmall ? 0.1 : isMobile ? 0.15 : 0.15,
-      deskPosition: isMobile ? [0, -6, -2.5] : [0, -5, -2.5],
-      cubePosition: isSmall ? [4, -5, 0] : isMobile ? [6.5, -5.8, -2] : isTablet ? [5, -5, 0] : [12, -6, 0],
+      deskScale: isSmall ? 6 : isMobile ? 8 : 10,
+      deskPosition: isMobile ? [1.5, -4.5, -2.5] : [1.5, -4.5, -2.5],
+      cubePosition: isSmall ? [4, -5, 0] : isMobile ? [6, -9, -9] : isTablet ? [5, -5, 0] : [12, -6, 0],
       reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [6, 3.5, 0] : isTablet ? [5, 4, 0] : [11, 3, 2],
       ringPosition: isSmall ? [-10, 4, 0] : isMobile ? [-11, 5, 6] : isTablet ? [-12, 10, 0] : [-25, 5, 3],
       targetPosition: isSmall ? [-5, -10, -5] : isMobile ? [-8, -6.5, -5] : isTablet ? [-11, -7, -5] : [-20, -12, -10],

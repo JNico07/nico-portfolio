@@ -13,7 +13,6 @@ import HeroCamera from "../components/HeroCamera.jsx"
 import Button from "../components/Button.jsx"
 
 const Hero = () => {
-  // Make it Responsive on all Screen
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -29,7 +28,7 @@ const Hero = () => {
 
           <div className="w-full h-full absolute inset-0">
             
-            <Canvas className="wfull h-full">
+            <Canvas className="w-full h-full">
               <Suspense fallback={<CanvasLoader />}>
 
                 <PerspectiveCamera makeDefault position={[0, 0, 20]} />
@@ -50,7 +49,7 @@ const Hero = () => {
                 </group>
 
                 <ambientLight intensity={1} />
-                <directionalLight position={[10, 10, 10]} intensity={0.5}/>
+                {/* <directionalLight position={[10, 10, 10]} intensity={1}/> */}
 
               </Suspense>
             </Canvas>
