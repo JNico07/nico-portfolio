@@ -1,5 +1,7 @@
 import { useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
+import Globe from "react-globe.gl";
+import EarthCanvas from "../components/Earth";
 
 const Contact = () => {
     const formRef = useRef();
@@ -54,69 +56,66 @@ const Contact = () => {
 
   return (
     <section id="contact" className="c-space my-20">
-        <div className="relative min-h-screen flex items-center justify-center flex-col">
-            <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen"/>
-
-            <div className="contact-container">
-                <h3 className="head-text">
-                    Let&apos;s Talk
-                </h3>
-                <p className="text-lg text-white-600 mt-3">
-                    I&apos;m looking forward working with you!
-                </p>
-
-                <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
-                    <label className='space-y-3'>
-                        <span className="field-label">Full Name</span>
-
-                        <input 
-                            type="text"
-                            name="name"
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="Enter your full name"
-                            className="field-input"
-                            required
+        <div className="grid xl:grid-cols-2 grid-cols-1 gap-5 h-full">
+            <div className="col-span-1 flex flex-col justify-center items-center p-8 relative">
+                <div className="relative z-10 text-white">
+                    <h3 className="head-text text-4xl font-bold mb-4">Let&apos;s Talk</h3>
+                    <p className="text-lg text-gray-300 mb-6">I&apos;m looking forward to working with you!</p>
+                <form ref={formRef} onSubmit={handleSubmit} className="mt-6 flex flex-col space-y-6 w-full max-w-md">
+                    <label className="flex flex-col">
+                        <span className="field-label text-sm font-semibold mb-2">Full Name</span>
+                        <input
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        placeholder="Enter your full name"
+                        className="field-input bg-gray-700 text-white p-3 rounded"
+                        required
                         />
                     </label>
-                    <label className='space-y-3'>
-                        <span className="field-label">Email</span>
-
-                        <input 
-                            type="email"
-                            name="email"
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder="Enter your email"
-                            className="field-input"
-                            required
+                    <label className="flex flex-col">
+                        <span className="field-label text-sm font-semibold mb-2">Email</span>
+                        <input
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Enter your email"
+                        className="field-input bg-gray-700 text-white p-3 rounded"
+                        required
                         />
                     </label>
-                    <label className='space-y-3'>
-                        <span className="field-label">Your Message</span>
-
-                        <textarea 
-                            name="message"
-                            value={form.message}
-                            onChange={handleChange}
-                            placeholder="Hi, I wanna give you a..."
-                            className="field-input"
-                            rows={5}
-                            required
+                    <label className="flex flex-col">
+                        <span className="field-label text-sm font-semibold mb-2">Your Message</span>
+                        <textarea
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        placeholder="Hi, I wanna give you a..."
+                        className="field-input bg-gray-700 text-white p-3 rounded"
+                        rows={2}
+                        required
                         />
                     </label>
-
-                        <button type="submit" className="field-btn" disabled={loading}>
-                        {loading ? 'sending...' : 'Send Message'}
-
-                            <img src="assets/arrow-up.png" alt="arrow" className="field-btn_arrow"/>
-                        </button>
-
+                    <button
+                        type="submit"
+                        className="field-btn bg-blue-600 text-white py-3 rounded hover:bg-blue-700"
+                        disabled={loading}
+                    >
+                        {loading ? 'Sending...' : 'Send Message'}
+                    </button>
                 </form>
             </div>
         </div>
-        
-    </section>
+
+    {/* Globe Section */}
+    <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+        <EarthCanvas />
+    </div>
+  </div>
+</section>
+
   )
 }
 

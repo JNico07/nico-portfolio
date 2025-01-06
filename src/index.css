@@ -9,12 +9,27 @@
 }
 
 body {
-  background: #010103;
+  overscroll-behavior-y: none;
+  font-family: 'Inter var', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #ddd;
+  background: #12071f;
   /* background: #0f0015; */
   font-family: 'General Sans', sans-serif;
 }
 
 @layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#c850c0] to-[#ffcc70] bg-clip-text text-transparent;
+  }
+  .about-background {
+    @apply relative;
+      background-image: url('');
+      background-size: cover;
+      background-position: center;
+  }
+
   .c-space {
     @apply sm:px-10 px-5;
   }

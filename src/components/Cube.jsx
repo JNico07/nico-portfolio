@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
 import { Float, useGLTF, useTexture } from '@react-three/drei';
+import { useMediaQuery } from 'react-responsive';
 
 const Cube = ({ ...props }) => {
   const { nodes } = useGLTF('models/cube.glb');
@@ -14,6 +15,9 @@ const Cube = ({ ...props }) => {
 
   const cubeRef = useRef();
   const [hovered, setHovered] = useState(false);
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const scale = isMobile ? 0.43 : 0.74;
 
   useGSAP(() => {
     gsap
@@ -33,7 +37,7 @@ const Cube = ({ ...props }) => {
 
   return (
     <Float floatIntensity={1}>
-      <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={0.74} dispose={null} {...props}>
+      <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={scale} dispose={null} {...props}>
         <mesh
           ref={cubeRef}
           castShadow

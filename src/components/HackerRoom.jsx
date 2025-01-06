@@ -6,14 +6,11 @@ Source: https://sketchfab.com/3d-models/personal-computer-aa398650fe6e4baa8771c7
 Title: Personal Computer
 */
 
-import { useGLTF, useTexture } from '@react-three/drei'
-import { useMediaQuery } from 'react-responsive';
+import { Stars, useGLTF, useTexture } from '@react-three/drei'
 
 const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF('/models/personal_computer.glb');
   const screenTexture = useTexture('/textures/desk/screen.png');
-
-  const isMobile = useMediaQuery({ maxWidth: 768 });
 
 
   return (
@@ -49,7 +46,7 @@ const HackerRoom = (props) => {
             />
 
             <mesh>
-              <hemisphereLight intensity={10} groundColor="black" />
+              <hemisphereLight intensity={20} groundColor="black" />
               <spotLight
                 position={[-20, 50, 10]}
                 angle={0.12}
@@ -58,14 +55,17 @@ const HackerRoom = (props) => {
                 castShadow
                 shadow-mapSize={1024}
               />
-              <pointLight intensity={1} />
-              <primitive
-                object={scene}
-                scale={isMobile ? 0.7 : 0.75}
-                position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-                rotation={[-0.01, -0.2, -0.1]}
-              />
+              <pointLight intensity={10} />
             </mesh>
+
+            <Stars
+              radius={5} // Radius of the sphere containing stars
+              depth={50} // Star layer depth
+              count={2000} // Number of stars
+              factor={3} // Size of stars
+              saturation={0} // Star color saturation
+              fade // Fades stars when close to camera
+            />
 
           </group>
         </group>

@@ -1,5 +1,3 @@
-import Globe from "react-globe.gl"
-import Button from "../components/Button"
 import { useState } from "react";
 
 const About = () => {
@@ -16,9 +14,9 @@ const About = () => {
 
   return (
     <section id="about" className="c-space my-20">
-        <div className="grid xl:grid-cols-3 xl:gap-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-            <div className="col-span-1 xl:row-span-2">
-                
+        <div className="grid xl:grid-cols-2 xl:gap-rows-1 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+
+            <div className="col-span-1 xl:row-span-1">
                 <div className="grid-container">
                     <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain"/>
     
@@ -27,10 +25,9 @@ const About = () => {
                         <p className="grid-subtext">I am a Computer Science college student, have a knowledge in Mobile and Web Developnent, and a passionate learner.</p>
                     </div>
                 </div>
-
             </div>
 
-            <div className="col-span-1 xl:row-span-2">
+            <div className="col-span-1 xl:row-span-1">
                 <div className="grid-container">
                     <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
 
@@ -41,41 +38,9 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="col-span-1 xl:row-span-3">
-                <div className="grid-container">
-                    <div className="rounded-3xl sm:h-[326px] h-fit flex justify-center items-center">
-                        <Globe 
-                            height={326}
-                            width={326}
-                            backgroundColor="rgba(0,0,0,0)"
-                            backgroundImageOpacity={0.5}
-                            showAtmosphere
-                            showGraticules
-                            globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
-                            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                            labelsData={[{
-                                lat: 14.5995, lng: 120.9842,
-                                text: "I'm here!",
-                                color: 'white',
-                                size: 1.5,
-                            }]}
-                            labelColor={(d) => d.color}
-                            labelSize={(d) => d.size} 
-                        />
-                    </div>
-                    <div>
-                        <p className="grid-headtext">Let&apos;s Connect</p>
-                        <p className="grid-subtext">I am always open to new opportunities and collaborations.</p>
-                    </div>
-                    <div>
-                        <a href="#email.me" className="w-fit">
-                            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
 
-            <div className="xl:col-span-2 xl:row-span-2">
+            <div className="xl:col-span-1 xl:row-span-1">
                 <div className="grid-container">
                     <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"/>
 
