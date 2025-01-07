@@ -4,9 +4,7 @@ const Footer = () => {
     <section className="c-space pt-7 pb-3 flex justify-between items-center flex-wrap gap-5">
         <div className="text-white-500 flex gap-2">
 
-            <p>Terms & Conditions</p>
-            <p>|</p>
-            <p>Privacy Policy</p>
+            <p>© 2025 Jay Nico</p>
  
         </div>
 
@@ -24,7 +22,7 @@ const Footer = () => {
           </a>
         </div>
         
-        <p className="text-white-500">© 2025 Jay Nico. All Rights Reserved</p>
+        <p className="text-white-500">All Rights Reserved</p>
 
     </section>
   )
