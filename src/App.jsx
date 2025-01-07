@@ -13,13 +13,19 @@ import { Points, PointMaterial } from '@react-three/drei'
 import * as random from 'maath/random/dist/maath-random.esm'
 
 const App = () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
     <BrowserRouter>
 
     <Suspense fallback={<div>Loading...</div>}>
 
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
-        <Canvas camera={{ position: [0, 0, 1] }} pixelRation={window.devicePixelRatio/100} gl={{ antialias: false}}>
+        <Canvas
+            camera={{ position: [0, 0, 1] }}
+            pixelRatio={isMobile ? 1 : Math.min(window.devicePixelRatio, 2)} // Use lower pixelRatio
+            gl={{ antialias: false }}
+          >
           <Stars />
         </Canvas>
       </div>
