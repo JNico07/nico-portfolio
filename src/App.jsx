@@ -1,10 +1,8 @@
-import { Suspense, lazy } from 'react';
-
-const About = lazy(() => import('./sections/About'));
-const Contact = lazy(() => import('./sections/Contact'));
-const Footer = lazy(() => import('./sections/Footer'));
-const Hero = lazy(() => import('./sections/Hero'));
-const Navbar = lazy(() => import('./sections/Navbar'));
+import About from './sections/About'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+import Hero from './sections/Hero'
+import Navbar from './sections/Navbar'
 import { BrowserRouter } from 'react-router-dom'
 
 import { useState, useRef } from 'react'
@@ -13,21 +11,19 @@ import { Points, PointMaterial } from '@react-three/drei'
 import * as random from 'maath/random/dist/maath-random.esm'
 
 const App = () => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   return (
     <BrowserRouter>
 
-    <Suspense fallback={<div>Loading...</div>}>
-
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
-        <Canvas
-            camera={{ position: [0, 0, 1] }}
-            pixelRatio={isMobile ? 1 : Math.min(window.devicePixelRatio, 2)} // Use lower pixelRatio
-            gl={{ antialias: false }}
-          >
+      <Canvas
+          camera={{ position: [0, 0, 1] }}
+          dpr={Math.min(window.devicePixelRatio, 2)}
+          gl={{ antialias: false }}
+        >
           <Stars />
-        </Canvas>
+      </Canvas>
+
       </div>
 
       <div className="relative z-20">
@@ -42,8 +38,6 @@ const App = () => {
         <Footer />
       </div>
 
-    </Suspense>
-
     </BrowserRouter>
   )
 }
@@ -54,9 +48,14 @@ export default App
 function Stars(props) {
   const ref = useRef()
   const [sphere] = useState(() => random.inSphere(new Float32Array(1000), { radius: 1.5 }))
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+    if (!isMobile) {
+      ref.current.rotation.x -= delta / 10
+      ref.current.rotation.y -= delta / 15
+    }
   })
 
   return (
