@@ -9,6 +9,7 @@ import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import * as random from 'maath/random/dist/maath-random.esm'
+import Projects from './sections/Projects'
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
       
       <div className="relative max-w-7xl mx-auto z-10">
         <About />
+        <Projects />
         <Contact />
         <Footer />
       </div>
