@@ -80,7 +80,7 @@ export const navLinks = [
       desc: 'My portfolio website is a dynamic showcase of my projects and skills, built with React.js for efficient development and user interaction. It features 3D visuals powered by Three.js, providing a unique, immersive experience while maintaining a clean, modern design through Tailwind CSS.',
       subdesc:
         'Utilizing React.js for smooth navigation, Three.js for interactive animations, and Tailwind CSS for responsive layouts, the site delivers a polished and engaging presentation of my work.',
-      href: 'jaynico-portfolio.vercel.app',
+      href: '',
       texture: '/textures/project/Portfolio.mp4',
       logo: 'https://cdn-icons-png.freepik.com/512/4992/4992624.png',
       logoStyle: {
