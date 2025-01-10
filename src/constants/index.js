@@ -16,6 +16,11 @@ export const navLinks = [
     },
     {
       id: 4,
+      name: 'Projects',
+      href: '#projects',
+    },
+    {
+      id: 5,
       name: 'Work',
       href: '#contact',
     },
@@ -91,43 +96,6 @@ export const navLinks = [
           id: 4,
           name: 'Yolov5',
           path: 'https://cdn.prod.website-files.com/646dd1f1a3703e451ba81ecc/64994922cf2a6385a4bf4489_UltralyticsYOLO_mark_blue.svg',
-        },
-      ],
-    },
-    {
-      title: '...',
-      desc: '...',
-      subdesc:
-        '...',
-      href: '#',
-      texture: '/textures/project/loading.mp4',
-      logo: 'https://cdn-icons-png.freepik.com/512/4992/4992624.png',
-      logoStyle: {
-        backgroundColor: '#13202F',
-        border: '0.2px solid #17293E',
-        boxShadow: '0px 0px 60px 0px #2F6DB54D',
-      },
-      spotlight: '/assets/spotlight2.png',
-      tags: [
-        {
-          id: 1,
-          name: '...',
-          path: '/assets/loading.png',
-        },
-        {
-          id: 2,
-          name: '...',
-          path: '/assets/loading.png',
-        },
-        {
-          id: 3,
-          name: '...',
-          path: '/assets/loading.png',
-        },
-        {
-          id: 4,
-          name: '...',
-          path: '/assets/loading.png',
         },
       ],
     },
