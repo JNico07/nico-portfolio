@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import classNames from "classnames";
 import toast, { Toaster } from "react-hot-toast";
 import { MdOutlineClose } from "react-icons/md";
 import { GiProgression } from "react-icons/gi";

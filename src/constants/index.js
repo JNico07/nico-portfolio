@@ -29,35 +29,11 @@ export const navLinks = [
   export const clientReviews = [
     {
       id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
-      img: 'assets/review1.png',
+      name: 'Emily Sample',
+      position: 'Marketing Sample',
+      img: 'assets/reviewSample.png',
       review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-      id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
-      img: 'assets/review2.png',
-      review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-      id: 3,
-      name: 'John Dohsas',
-      position: 'Project Manager at UrbanTech ',
-      img: 'assets/review3.png',
-      review:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-      id: 4,
-      name: 'Ether Smith',
-      position: 'CEO of BrightStar Enterprises',
-      img: 'assets/review4.png',
-      review:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+        'Working with Nico was a fantastic experience.',
     },
   ];
   
@@ -96,6 +72,38 @@ export const navLinks = [
           id: 4,
           name: 'Yolov5',
           path: 'https://cdn.prod.website-files.com/646dd1f1a3703e451ba81ecc/64994922cf2a6385a4bf4489_UltralyticsYOLO_mark_blue.svg',
+        },
+      ],
+    },
+    {
+      title: 'Portfolio',
+      desc: 'My portfolio website is a dynamic showcase of my projects and skills, built with React.js for efficient development and user interaction. It features 3D visuals powered by Three.js, providing a unique, immersive experience while maintaining a clean, modern design through Tailwind CSS.',
+      subdesc:
+        'Utilizing React.js for smooth navigation, Three.js for interactive animations, and Tailwind CSS for responsive layouts, the site delivers a polished and engaging presentation of my work.',
+      href: 'jaynico-portfolio.vercel.app',
+      texture: '/textures/project/Portfolio.mp4',
+      logo: 'https://cdn-icons-png.freepik.com/512/4992/4992624.png',
+      logoStyle: {
+        backgroundColor: '#13202F',
+        border: '0.2px solid #17293E',
+        boxShadow: '0px 0px 60px 0px #2F6DB54D',
+      },
+      spotlight: '/assets/spotlight2.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: 'https://cdn-icons-png.flaticon.com/128/3334/3334886.png',
+        },
+        {
+          id: 2,
+          name: 'Three.js',
+          path: 'https://global.discourse-cdn.com/flex035/uploads/threejs/optimized/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751_2_1016x1024.png',
+        },
+        {
+          id: 3,
+          name: 'Tailwind CSS',
+          path: 'https://bourhaouta.gallerycdn.vsassets.io/extensions/bourhaouta/tailwindshades/0.0.5/1592520164095/Microsoft.VisualStudio.Services.Icons.Default',
         },
       ],
     },
