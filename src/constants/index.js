@@ -56,7 +56,7 @@ export const navLinks = [
         {
           id: 1,
           name: 'Android Studio',
-          path: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png',
+          path: 'https://img.icons8.com/?size=100&id=EgOU93v1DHjU&format=png&color=000000',
         },
         {
           id: 2,
@@ -98,7 +98,7 @@ export const navLinks = [
         {
           id: 2,
           name: 'Three.js',
-          path: 'https://global.discourse-cdn.com/flex035/uploads/threejs/optimized/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751_2_1016x1024.png',
+          path: 'https://canada1.discourse-cdn.com/flex035/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png',
         },
         {
           id: 3,
